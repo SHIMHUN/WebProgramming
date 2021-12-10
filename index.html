@@ -1,0 +1,44 @@
+<!doctype html> <!--1.폰트 스타일 바꿔야 함 2. 배경 스타일 바꿔야함-->
+<html>
+    <head>
+        <style>
+           body {
+                    height: 100vh;
+                    background-image: url('vladimir-fedotov-IJ4WYjq1EaI-unsplash.jpg');
+                    background-repeat : no-repeat;
+                    background-size : cover;
+                }
+           #title {text-align: center;}
+           /*메뉴바 스타일링*/
+           #Main_L {display:inline-block;}
+           #Menu {margin-bottom: 20px;}
+           #Menu input {color: slategrey; background-color: darkgrey;}
+           #Menu input:hover{color: crimson; background-color: darkblue;}
+           
+           /*인라인프레임 스타일링*/
+           #Main_R {display:inline-block; float: right;}
+           #iframe_title{text-align: right; margin-right: 250px;}
+           #Main_L {background-color: slateblue;}
+           #Main_R #copyright{text-align: right;}           
+        </style>
+    </head>
+    <body>
+        <div id="Box1">
+            <h1 id="title"><strong>COVID-19 INFO</strong></h1> <!--페이지 제목-->
+            <div id="iframe_title">SBS NOW(출처:SBS)</div> <!--인라인프레임 제목(폰트 스타일 바꿔야함)-->
+                <div>
+                    <div id="Main_L"> <!--버튼 클릭시 해당 링크 연결-->
+                        <div id="Menu"><input type="button" value="Home"></div> 
+                        <div id="Menu"><input type="button" value="What Covid?"></div>
+                        <div id="Menu"><input type="button" value="Register"></div>
+                        <div id="Menu"><input type="button" value="Progressing Now"></div>
+                    </div>
+                    <div id="Main_R"> <!--인라인 프레임으로 뉴스 출력-->
+                        <iframe src="https://news.sbs.co.kr/news/newsHotIssueList.do?tagId=10000050973" frameborder="0" width="670" height="700"></iframe>
+                        <br>
+                        <div id="copyright"><h1><strong>&copy;copyright 심 훈 All rights reserved</strong></h1></div> <!--저작권 표시-->
+                    </div>
+                </div>
+        </div>
+    </body>
+</html>
