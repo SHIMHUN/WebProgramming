@@ -1,42 +1,56 @@
-<!doctype html> <!--1.폰트 스타일 바꿔야 함 2. 배경 스타일 바꿔야함-->
+<!doctype html> <!--1.폰트 스타일 바꿔야 함 2. 배경 스타일 바꿔야함 3.배경이미지 바꿔야함-->
 <html>
     <head>
         <style>
            body {
                     height: 100vh;
-                    background-image: url('https://user-images.githubusercontent.com/90015362/145581476-8dca1625-3d8a-49e2-bdbe-b8cb7c85ce19.jpg');
+                    background-image: url('https://user-images.githubusercontent.com/90015362/145661165-c5005b1d-c5a6-4b9b-9d27-aedd6461b310.jpg');
                     background-repeat : no-repeat;
                     background-size : cover;
                 }
-           #title {text-align: center;}
+           #title {text-align: center; animation:tracking-in-contract 2s ease-in-out; animation-iteration-count: infinite;}
+           @keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
            /*메뉴바 스타일링*/
            #Main_L {display:inline-block;}
-           #Menu {margin-bottom: 20px;}
-           #Menu input {color: slategrey; background-color: darkgrey;}
-           #Menu input:hover{color: crimson; background-color: darkblue;}
-           
+           #Menu {margin-bottom: 20px; }
+           input {color:navy; background-color: lime; transition : font-size 1s; border-radius: 10%;}
+           input:hover{color: crimson; background-color: dodgerblue; font-size:150%;} 
+           #Main_L1 {margin-right: 360px; }
+           #Menu_L2{display: inline; position: absolute;}
            /*인라인프레임 스타일링*/
            #Main_R {display:inline-block; float: right;}
-           #iframe_title{text-align: right; margin-right: 250px;}
-           #Main_L {background-color: slateblue;}
-           #Main_R #copyright{text-align: right;}           
+           #iframe_title{text-align: right; margin-right: 250px;}  
         </style>
     </head>
     <body>
         <div id="Box1">
             <h1 id="title"><strong>COVID-19 INFO</strong></h1> <!--페이지 제목-->
-            <div id="iframe_title">SBS NOW(출처:SBS)</div> <!--인라인프레임 제목(폰트 스타일 바꿔야함)-->
+            <div id="iframe_title"><strong>SBS NEWS</strong></div> <!--인라인프레임 제목(폰트 스타일 바꿔야함)-->
                 <div>
                     <div id="Main_L"> <!--버튼 클릭시 해당 링크 연결-->
-                        <div id="Menu"><input type="button" value="Home"></div> 
-                        <div id="Menu"><input type="button" value="What Covid?"></div>
-                        <div id="Menu"><input type="button" value="Register"></div>
-                        <div id="Menu"><input type="button" value="Progressing Now"></div>
+                        <div id="Main_L1">
+                            <div id="Menu"><input type="button" value="Home"></div> 
+                            <div id="Menu"><input type="button" value="What Covid?"></div>
+                            <div id="Menu"><input type="button" value="Register"></div>
+                            <div id="Menu"><input type="button" value="Progressing Now"></div>
+                        </div>  
+                        <div id="Main_L2">
+                            <script>
+                                for(var i=0;i<12;i++){
+                                    document.write("<br>");
+                                }
+                            </script>
+                            이 웹페이지는 코로나 19와 관련된 정보를 제공합니다.<br>
+                            왼쪽 상단의 메뉴바의 메뉴 클릭시 해당 링크로 이동합니다.<br>
+                            제작자의 허락없이 무단 배포할 시 법적 처벌을 받을 수 있습니다.
+                        </div>  
                     </div>
                     <div id="Main_R"> <!--인라인 프레임으로 뉴스 출력-->
-                        <iframe src="https://news.sbs.co.kr/news/newsHotIssueList.do?tagId=10000050973" frameborder="0" width="670" height="700"></iframe>
+                        <iframe src="https://news.sbs.co.kr/news/newsHotIssueList.do?tagId=10000050973" frameborder="0" width="600" height="500"></iframe>
                         <br>
-                        <div id="copyright"><h1><strong>&copy;copyright 심 훈 All rights reserved</strong></h1></div> <!--저작권 표시-->
+                        <div style="position: absolute; right: 0px; bottom: 0px;">
+                            <h1><strong>&copy;copyright 심 훈 All rights reserved</strong></h1><!--저작권 표시-->
+                        </div>
                     </div>
                 </div>
         </div>
