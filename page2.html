@@ -2,58 +2,68 @@
 <html>
     <head>
         <style>
-        #title {text-align: center; animation:tracking-in-contract 2s ease-in-out; animation-iteration-count: infinite;}
+            /*폰트 불러오기*/
+            @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+            
+            /*배경 이미지 설정*/
+            body {
+                height: 100vh;
+                background-image: url('https://user-images.githubusercontent.com/90015362/145661165-c5005b1d-c5a6-4b9b-9d27-aedd6461b310.jpg');
+                background-repeat : no-repeat;
+                background-size : cover;
+            }   
+            
+            /*제목 스타일링*/ 
+            #title {text-align: center; animation:tracking-in-contract 2s ease-in-out; animation-iteration-count: infinite;}
             @keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
-        body {
-            height: 100vh;
-            background-image: url('https://user-images.githubusercontent.com/90015362/145661165-c5005b1d-c5a6-4b9b-9d27-aedd6461b310.jpg');
-            background-repeat : no-repeat;
-            background-size : cover;
-        }   
-        #GoMain {color:navy; background-color: lime; transition : font-size 1s; position: absolute; right: 0px; padding: 20px; bottom: 70px; border-radius: 10%;} 
-        #GoMain:hover{color: crimson; background-color: dodgerblue; font-size:150%;} 
-        </style>
-        
+            
+            /*버튼 동적 변화(색깔변화+폰트 사이즈 크게)*/
+            #GoMain {color:navy; background-color: yellow; transition : font-size 1s; position: absolute; right: 0px; padding: 20px; bottom: 70px; border-radius: 10%;} 
+            #GoMain:hover{color: crimson; font-size:150%;} 
+            
+            /*폰트 스타일링*/
+            #form {font-family: 'Gowun Batang', serif;}
+            #save {background-color: deepskyblue;}
+            #retrieve {background-color: deepskyblue;}
+            </style>
     </head>
     <body>
         <h1 id="title"><strong>확진자 정보 등록 페이지</strong></h1>
         <div>
-            이름 : <input id="Name" type="text"><br><br>
-            나이 : <input id="age" type="text"><br><br>
-            주소 : <textarea name="address" id="address" cols="20" rows="5"></textarea><br><br>
-            증상 : <textarea name="symptom" id="symptom" cols="20" rows="5"></textarea><br><br>
-            특이사항 : <textarea name="option" id="option" cols="20" rows="5"></textarea><br><br>
-            <button id="save" onclick="store()">저장</button>
-            <button id="retrieve" onclick="retrieve()">검색</button>
+            <!--다른 페이지로 갔다가 돌아와서 로컬 스토리지가 남아있는지 체크하기-->
+            <strong id="form">이름 : </strong> <input id="Name" type="text"><br><br> <!--사용자의 정보 입력받기(아쉬운 점? 로컬 스토리지는 키,밸류값 딱 2개만 저장 가능...)-->
+            <strong id="form">특이사항 : </strong> <textarea name="option" id="option" cols="20" rows="5"></textarea><br>
+            <strong id="form">(나이,성별,거주지,전화번호를 입력하세요.)</strong><br>
+
+            <button id="save" onclick="store()"><strong id="form">저장</strong></button> <!--저장, 검색 버튼-->
+            <button id="retrieve" onclick="retrieve()"><strong id="form">검색</strong></button>
         </div>
         <div style="position: absolute; right: 0px; bottom: 0px;">
-            <div><button id="GoMain" type="button" onclick="location.href='https://shimhun.github.io/WebProgramming/'">Go to Main</button></div>
-            <h1><strong>&copy;copyright 심 훈 All rights reserved</strong></h1><!--저작권 표시-->
+            <div><button id="GoMain" type="button" onclick="location.href='https://shimhun.github.io/WebProgramming/'"><strong>Go to Main</strong></button></div> <!--메인으로 가는 버튼-->
+            <h1><strong>&copy;copyright 심 훈 All rights reserved</strong></h1> <!--저작권 표시-->
         </div>
         <script>
-            var Name = document.getElementById("Name");
-            var age = document.getElementById("age");
-            //var address = document.getElementById("address");
-            //var symptom = document.getElementById("symptom");
-            //var option = document.getElementById("option");
-
+            var Name = document.getElementById("Name"); /*id로 객체 찾기*/
+            var option = document.getElementById("option");
             function store(){
                 if(!window.localStorage){
-                    alert("세션스토리지를 지원하지 않습니다.")
+                    alert("로컬스토리지를 지원하지 않습니다.");
                     return;
                 }
-                localStorage.setItem(Name.value, age.value);  
+                localStorage.setItem(Name.value, option.value);  /*로컬 스토리지에 데이터 저장*/
             }
             function retrieve(){
                 if(!window.localStorage){
-                    alert("세션스토리지를 지원하지 않습니다.")
+                    alert("로컬스토리지를 지원하지 않습니다.");
                     return;
                 }
-                var val = localStorage.getItem(name.value);
-                if(val==Null)
-                    alert(item.value + "는 구입리스트에 없습니다.");
-                else
-                    alert(" : "+val.age.value);
+                var val = localStorage.getItem(Name.value); /*해당 사용자의 등록 여부에 따라 다른 값 저장*/
+                if(val==null){
+                    alert(Name.value + "은(는) 등록되지 않은 사용자입니다."); 
+                }    
+                else{
+                    alert(Name.value + "은(는) 등록된 사용자 입니다.");
+                }  
             }
         </script>
     </body>
