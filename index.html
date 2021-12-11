@@ -1,55 +1,66 @@
-<!doctype html> <!--1.폰트 스타일 바꿔야 함 2. 배경 스타일 바꿔야함 3.배경이미지 바꿔야함-->
+<!doctype html>
 <html>
     <head>
         <style>
-           body {
+           @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap'); /*폰트 불러오기*/
+           @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+           body { /*배경이미지 설정*/
                     height: 100vh;
                     background-image: url('https://user-images.githubusercontent.com/90015362/145661165-c5005b1d-c5a6-4b9b-9d27-aedd6461b310.jpg');
                     background-repeat : no-repeat;
                     background-size : cover;
                 }
-           #title {text-align: center; animation:tracking-in-contract 2s ease-in-out; animation-iteration-count: infinite;}
+           #title {text-align: center; animation:tracking-in-contract 2s ease-in-out; animation-iteration-count: infinite;} /*제목 스타일링*/
            @keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
-           /*메뉴바 스타일링*/
+           
+           /*왼쪽 큰 div 틀 스타일링(메뉴,주의문구포함)*/
            #Main_L {display:inline-block;}
            #Menu {margin-bottom: 20px; }
-           button {color:navy; background-color: lime; transition : font-size 1s; border-radius: 10%;}
-           button:hover{color: crimson; background-color: dodgerblue; font-size:150%;} 
-           #Main_L1 {margin-right: 360px; }
+           button {color:navy; background-color:yellow; transition : font-size 1s; border-radius: 10%; font-family: 'Gowun Batang', serif;}
+           button:hover{color: crimson; font-size:150%;} 
+           #Main_L1 {margin-right: 360px;}
            #Menu_L2{display: inline; position: absolute;}
-           /*인라인프레임 스타일링*/
+           
+           /*오른쪽 큰 div 틀 스타일링(뉴스,뉴스제목포함)*/
            #Main_R {display:inline-block; float: right;}
-           #iframe_title{text-align: right; margin-right: 250px;}  
+           #iframe_title{text-align: right; margin-right: 250px;color:orangered}  
+           
+           /*폰트 스타일링*/
+           p {font-family: 'Black Han Sans', sans-serif; font-size: 30px;}
         </style>
+
     </head>
     <body>
         <div id="Box1">
             <h1 id="title"><strong>COVID-19 INFO</strong></h1> <!--페이지 제목-->
-            <div id="iframe_title"><strong>SBS NEWS</strong></div> <!--인라인프레임 제목(폰트 스타일 바꿔야함)-->
+            <div id="iframe_title"><div id="SBS"><h1><strong>SBS NEWS</strong></h1></div></div> <!--인라인프레임 제목-->
                 <div>
                     <div id="Main_L"> <!--버튼 클릭시 해당 링크 연결-->
                         <div id="Main_L1">
-                            <div id="Menu"><button type="button" onclick="location.href='https://shimhun.github.io/WebProgramming/'">Home</button></div> 
-                            <div id="Menu"><button type="button" onclick="location.href='https://shimhun.github.io/WebProgramming/page1.html'">What Covid?</button></div>
-                            <div id="Menu"><button type="button" onclick="location.href='https://shimhun.github.io/WebProgramming/page2.html'">Register</button></div>
-                            <div id="Menu"><button type="button" onclick="location.href='https://shimhun.github.io/WebProgramming/page3.html'">How about World?</button></div>
+                            <div id="Menu"><button type="button" onclick="location.href='https://shimhun.github.io/WebProgramming/'"><strong>Home</strong> </button></div> 
+                            <div id="Menu"><button type="button" onclick="location.href='https://shimhun.github.io/WebProgramming/page1.html'"><strong>What Covid?</strong></button></div>
+                            <div id="Menu"><button type="button" onclick="location.href='https://shimhun.github.io/WebProgramming/page2.html'"><strong>Register</strong></button></div>
+                            <div id="Menu"><button type="button" onclick="location.href='https://shimhun.github.io/WebProgramming/page3.html'"><strong>How about World?</strong></button></div>
                         </div>  
-                        <div id="Main_L2">
+                        <div id="Main_L2"> <!--주의 문구 출력-->
                             <script>
-                                for(var i=0;i<12;i++){
+                                for(var i=0;i<7;i++){
                                     document.write("<br>");
                                 }
                             </script>
+                            <p id="explain">
+                            주의!!<br>
                             이 웹페이지는 코로나 19와 관련된 정보를 제공합니다.<br>
-                            왼쪽 상단의 메뉴바의 메뉴 클릭시 해당 링크로 이동합니다.<br>
+                            왼쪽 상단의 메뉴바의 메뉴 클릭시 해당 페이지로 이동합니다.<br>
                             제작자의 허락없이 무단 배포할 시 법적 처벌을 받을 수 있습니다.
+                            </p>
                         </div>  
                     </div>
                     <div id="Main_R"> <!--인라인 프레임으로 뉴스 출력-->
-                        <iframe src="https://news.sbs.co.kr/news/newsHotIssueList.do?tagId=10000050973" frameborder="0" width="600" height="500"></iframe>
+                        <iframe src="https://news.sbs.co.kr/news/newsHotIssueList.do?tagId=10000050973" frameborder="0" width="700" height="500"></iframe>
                         <br>
                         <div style="position: absolute; right: 0px; bottom: 0px;">
-                            <h1><strong>&copy;copyright 심 훈 All rights reserved</strong></h1><!--저작권 표시-->
+                            <h1><strong>&copy;copyright 심 훈 All rights reserved</strong></h1> <!--저작권 표시-->
                         </div>
                     </div>
                 </div>
