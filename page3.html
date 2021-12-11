@@ -2,8 +2,11 @@
 <html>
     <head>
         <style>
-            #title {text-align: center; animation:tracking-in-contract 2s ease-in-out; animation-iteration-count: infinite;}
-            @keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
+            /*폰트 불러오기*/
+            @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+            
+            /*배경 이미지 설정*/
             body {
                     height: 100vh;
                     background-image: url('https://user-images.githubusercontent.com/90015362/145661165-c5005b1d-c5a6-4b9b-9d27-aedd6461b310.jpg');
@@ -12,18 +15,29 @@
                 }
                 first {float: left;}
                 second {float: right; position: absolute;}
-            button {color:navy; background-color: lime; transition : font-size 1s; position: absolute; right: 0px; padding: 20px; bottom: 70px; border-radius: 10%;} 
-            button:hover{color: crimson; background-color: dodgerblue; font-size:150%;} 
+            
+            /*제목 스타일링*/ 
+            #title {text-align: center; animation:tracking-in-contract 2s ease-in-out; animation-iteration-count: infinite;}
+            @keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
+            
+            /*버튼 동적 변화(색깔변화+폰트 사이즈 크게)*/
+            #GoMain {color:navy; background-color:yellow; transition : font-size 1s; position: absolute; right: 0px; padding: 20px; bottom: 70px; border-radius: 10%;} 
+            #GoMain:hover{color: crimson; font-size:150%;} 
+            
+            /*폰트 스타일링*/
+            li {font-family: 'Black Han Sans', sans-serif;}
+            summary {font-family: 'Gowun Batang', serif;}  
         </style>
     </head>
     <body>
         <h1 id="title"><strong>COVID-19 발생현황</strong></h1>
         <div>
+            <!--2개의 인라인 프레임에 각각 국내외 상황을 창으로 띄우기-->
             <iframe id="first" src="https://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=14&ncvContSeq=&contSeq=&board_id=&gubun=" frameborder="0" width="500" height="500" style="filter: Alpha(Opacity=35);">
             </iframe>
             <iframe id="second" src="https://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=" frameborder="0" name="right" width="500" height="500"></iframe>
             <br><br><br>
-            COVID-19 국가별 대응 사례 <!--새로운 창에서 화면 출력하기-->
+            <h3><strong>COVID-19 국가별 대응 사례</strong></h3> <!--링크 클릭시 해당 위치로 이동-->
             <details>
                 <summary>아시아</summary>
                 <ol>
@@ -96,7 +110,7 @@
             </details>
         </div>    
         <div style="position: absolute; right: 0px; bottom: 0px;">
-            <div id="GOMain"><button type="button" onclick="location.href='https://shimhun.github.io/WebProgramming/'">Go to Main</button></div>
+            <div><button id="GoMain" type="button" onclick="location.href='https://shimhun.github.io/WebProgramming/'"><strong>Go to Main</strong></button></div> <!--메인으로 가는 버튼-->
             <h1><strong>&copy;copyright 심 훈 All rights reserved</strong></h1><!--저작권 표시-->
         </div>
     </body>
