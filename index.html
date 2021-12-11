@@ -2,28 +2,33 @@
 <html>
     <head>
         <style>
-           @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap'); /*폰트 불러오기*/
+           /*폰트 불러오기*/
+           @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap'); 
            @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
-           body { /*배경이미지 설정*/
+           
+           /*배경이미지 설정*/
+           body { 
                     height: 100vh;
                     background-image: url('https://user-images.githubusercontent.com/90015362/145661165-c5005b1d-c5a6-4b9b-9d27-aedd6461b310.jpg');
                     background-repeat : no-repeat;
                     background-size : cover;
                 }
-           #title {text-align: center; animation:tracking-in-contract 2s ease-in-out; animation-iteration-count: infinite;} /*제목 스타일링*/
+          
+           /*제목 스타일링*/
+           #title {text-align: center; animation:tracking-in-contract 2s ease-in-out; animation-iteration-count: infinite;} 
            @keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
            
            /*왼쪽 큰 div 틀 스타일링(메뉴,주의문구포함)*/
            #Main_L {display:inline-block;}
            #Menu {margin-bottom: 20px; }
-           button {color:navy; background-color:yellow; transition : font-size 1s; border-radius: 10%; font-family: 'Gowun Batang', serif;}
+           button {color:navy; background-color:yellow; transition : font-size 1s; border-radius: 10%; font-family: 'Gowun Batang', serif;} /*버튼 동적 변화(색깔변화+폰트 사이즈 크게)*/
            button:hover{color: crimson; font-size:150%;} 
            #Main_L1 {margin-right: 360px;}
            #Menu_L2{display: inline; position: absolute;}
            
            /*오른쪽 큰 div 틀 스타일링(뉴스,뉴스제목포함)*/
            #Main_R {display:inline-block; float: right;}
-           #iframe_title{text-align: right; margin-right: 250px;color:orangered}  
+           #iframe_title{text-align: right; margin-right: 250px;color:orangered} 
            
            /*폰트 스타일링*/
            p {font-family: 'Black Han Sans', sans-serif; font-size: 30px;}
