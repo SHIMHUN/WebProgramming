@@ -1,38 +1,47 @@
-<!doctype html> <!--1.폰트스타일바꾸기 2.배경 이미지 바꿔야함-->
+<!doctype html>
 <html>
     <head>
         <style>
-            #title {text-align: center; animation:tracking-in-contract 2s ease-in-out; animation-iteration-count: infinite;}
-            @keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
-            body {
+            /*폰트 불러오기*/
+            @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+            
+            /*배경이미지 설정*/
+            body { 
                     height: 100vh;
                     background-image: url('https://user-images.githubusercontent.com/90015362/145661165-c5005b1d-c5a6-4b9b-9d27-aedd6461b310.jpg');
                     background-repeat : no-repeat;
                     background-size : cover;
                 }
-            div {display:inline;} /*인라인 블록태그를 사용하여 일렬로 보여지게 했습니다*/
-            img:hover {width:400px; transform:scale(1.5); transition:transform.5s;} /*마우스를 갖다대면 이미지가 커지게 했습니다*/
-            button {color:navy; background-color: lime; transition : font-size 1s; position: absolute; right: 0px; padding: 20px; bottom: 70px; border-radius: 10%;} 
-            button:hover{color: crimson; background-color: dodgerblue; font-size:150%;} 
+            
+            /*제목 스타일링*/ 
+            #title {text-align: center; animation:tracking-in-contract 2s ease-in-out; animation-iteration-count: infinite;}
+            @keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}    
+
+            
+            div {display:inline;} /*div박스를 인라인처리하여 이미지들을 가로로 출력*/
+            img:hover {width:400px; transform:scale(1.5); transition:transform.5s;} /*이미지 동적 변화(1.5배 확대)*/
+            #GoMain {color:navy; background-color: yellow; transition : font-size 1s; position: absolute; right: 0px; padding: 20px; bottom: 70px; border-radius: 10%; font-family: 'Gowun Batang', serif;} /*버튼 동적 변화(색깔변화+폰트 사이즈 크게)*/
+            #GoMain:hover{color: crimson; font-size:150%;} 
+            
+            /*폰트 스타일링*/
+            p {font-family: 'Black Han Sans', sans-serif; font-size: 30px;}
+            li {font-family: 'Black Han Sans', sans-serif; font-size: 30px;}
+            summary {font-family: 'Gowun Batang', serif;}
         </style>
-        <script>
-            function big(obj){
-                pic=document.get
-            }
-        </script>
     </head>
     <body>
         <h1 id="title"><strong>COVID-19에 관하여</strong></h1>
         <div>
             <details>
-                <summary>공식명칭</summary>
+                <summary><strong>공식명칭</strong></summary>
                 <p>
                     코로나바이러스감염증-19(코로나19, 영어: coronavirus disease 2019, COVID-19) 또는 신종 코로나바이러스 감염증(문화어: 신형코로나비루스감염증)는 SARS-CoV-2가 일으키는 중증 호흡기 증후군이다. 2019년 12월에 첫 사례가 보고되었고, 전 세계적으로 퍼져나가면서 유행병으로 자리잡았다.
                 </p>
             </details>  
             
             <details>   
-                <summary>바이러스 전자현미경 형태</summary>  <!--사진 onclick시 확대하거나 동적 변화하는 기능 추가하기-->
+                <summary><strong>바이러스 전자현미경 형태</strong></summary>  <!--사진 onclick시 확대하거나 동적 변화하는 기능 추가하기-->
                     <p>클릭시 확대 가능합니다!</p>
                     <div><img src="https://user-images.githubusercontent.com/90015362/145661161-8cb97bfb-5762-4b3c-a9d6-52ec1a865ea3.jpeg" alt="1" width="400" height="400" onclick="alert('투과 전자 현미경(TEM)으로 관측 후 그래픽화한 SARS-CoV-2')"></div>
                     <div><img src="https://user-images.githubusercontent.com/90015362/145661163-a1cde5a7-c9a6-4a42-9f03-f3044e6e363c.png" alt="2"  width="400" height="400" onclick="alert('투과 전자 현미경(TEM)으로 관측 후 그래픽화한 SARS-CoV-2')"></div>
@@ -41,7 +50,7 @@
                 </details>  
             
             <details> 
-                <summary>발생 원인</summary> <!--글씨 스타일 바꾸기-->
+                <summary><strong>발생 원인</strong></summary> <!--글씨 스타일 바꾸기-->
                 <p>중국 우한에서 발생했다는 사실 이외에는 아직까지 정확한 발생원인은 알려진 것이 없고 가설만 존재한다. 다음은 WHO 조사단을 대표하여 식품안전·동물질병 전문가인 피터 벤 엠바렉 박사가 소개한 4가지의 가설들이다.</p>
                     <ol>
                             <li>야생 동물에 있던 바이러스가 종간 장벽을 넘어 사람에게 직접 전파됐을 가능성</li>
@@ -52,7 +61,7 @@
             </details>
             
             <details>       
-                <summary>증상</summary>
+                <summary><strong>증상</strong></summary> 
                 <ul>
                     <li>발열 또는 오한</li>
                     <li>기침</li>
@@ -69,7 +78,7 @@
             </details>
         
             <details>
-                <summary>예방법</summary>  
+                <summary><strong>예방법</strong></summary>  
                 <ul>
                     <li>무증상으로 보이더라도 타인과 안전한 거리(1미터 이상)를 유지하세요.</li>
                     <li>공공장소에서 특히 실내에 있거나 물리적 거리두기가 불가능할 땐 마스크를 쓰세요.</li>
@@ -79,11 +88,11 @@
                     <li>기침 또는 재채기를 할 때는 화장지를 이용하거나 팔꿈치를 구부려 코와 입을 가리세요.</li>
                     <li>몸이 좋지 않다면 집에서 쉬세요.</li>
                 </ul>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/059c-VBnv2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/059c-VBnv2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!--유튜브 영상 링크-->
             </details>
         </div>    
         <div style="position: absolute; right: 0px; bottom: 0px;">
-            <div id="GOMain"><button type="button" onclick="location.href='https://shimhun.github.io/WebProgramming/'">Go to Main</button></div>
+            <div><button id="GoMain" type="button" onclick="location.href='https://shimhun.github.io/WebProgramming/'"><strong>Go to Main</strong></button></div> <!--메인으로 가는 버튼-->
             <h1><strong>&copy;copyright 심 훈 All rights reserved</strong></h1><!--저작권 표시-->
         </div>
     </body>
