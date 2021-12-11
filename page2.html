@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+        #title {text-align: center; animation:tracking-in-contract 2s ease-in-out; animation-iteration-count: infinite;}
+            @keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
+        body {
+            height: 100vh;
+            background-image: url('https://user-images.githubusercontent.com/90015362/145661165-c5005b1d-c5a6-4b9b-9d27-aedd6461b310.jpg');
+            background-repeat : no-repeat;
+            background-size : cover;
+        }   
+        </style>
+        
+    </head>
+    <body>
+        <h1 id="title"><strong>확진자 정보 등록 페이지</strong></h1>
+        <div>
+            이름 : <input id="Name" type="text"><br><br>
+            나이 : <input id="age" type="text"><br><br>
+            주소 : <textarea name="address" id="address" cols="20" rows="5"></textarea><br><br>
+            증상 : <textarea name="symptom" id="symptom" cols="20" rows="5"></textarea><br><br>
+            특이사항 : <textarea name="option" id="option" cols="20" rows="5"></textarea><br><br>
+            <button id="save" onclick="store()">저장</button>
+            <button id="retrieve" onclick="retrieve()">검색</button>
+        </div>
+        <div style="position: absolute; right: 0px; bottom: 0px;">
+            <h1><strong>&copy;copyright 심 훈 All rights reserved</strong></h1><!--저작권 표시-->
+        </div>
+        <script>
+            var Name = document.getElementById("Name");
+            var age = document.getElementById("age");
+            //var address = document.getElementById("address");
+            //var symptom = document.getElementById("symptom");
+            //var option = document.getElementById("option");
+
+            function store(){
+                if(!window.localStorage){
+                    alert("세션스토리지를 지원하지 않습니다.")
+                    return;
+                }
+                localStorage.setItem(Name.value, age.value);  
+            }
+            function retrieve(){
+                if(!window.localStorage){
+                    alert("세션스토리지를 지원하지 않습니다.")
+                    return;
+                }
+                var val = localStorage.getItem(name.value);
+                if(val==Null)
+                    alert(item.value + "는 구입리스트에 없습니다.");
+                else
+                    alert(" : "+val.age.value);
+            }
+        </script>
+    </body>
+</html>   

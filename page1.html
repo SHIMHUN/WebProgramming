@@ -1,0 +1,87 @@
+<!doctype html> <!--1.폰트스타일바꾸기 2.배경 이미지 바꿔야함-->
+<html>
+    <head>
+        <style>
+            #title {text-align: center; animation:tracking-in-contract 2s ease-in-out; animation-iteration-count: infinite;}
+            @keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
+            body {
+                    height: 100vh;
+                    background-image: url('https://user-images.githubusercontent.com/90015362/145661165-c5005b1d-c5a6-4b9b-9d27-aedd6461b310.jpg');
+                    background-repeat : no-repeat;
+                    background-size : cover;
+                }
+            div {display:inline;} /*인라인 블록태그를 사용하여 일렬로 보여지게 했습니다*/
+            img:hover {width:400px; transform:scale(1.5); transition:transform.5s;} /*마우스를 갖다대면 이미지가 커지게 했습니다*/
+        </style>
+        <script>
+            function big(obj){
+                pic=document.get
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="title"><strong>COVID-19에 관하여</strong></h1>
+        <div>
+            <details>
+                <summary>공식명칭</summary>
+                <p>
+                    코로나바이러스감염증-19(코로나19, 영어: coronavirus disease 2019, COVID-19) 또는 신종 코로나바이러스 감염증(문화어: 신형코로나비루스감염증)는 SARS-CoV-2가 일으키는 중증 호흡기 증후군이다. 2019년 12월에 첫 사례가 보고되었고, 전 세계적으로 퍼져나가면서 유행병으로 자리잡았다.
+                </p>
+            </details>  
+            
+            <details>   
+                <summary>바이러스 전자현미경 형태</summary>  <!--사진 onclick시 확대하거나 동적 변화하는 기능 추가하기-->
+                    <p>클릭시 확대 가능합니다!</p>
+                    <div><img src="https://user-images.githubusercontent.com/90015362/145661161-8cb97bfb-5762-4b3c-a9d6-52ec1a865ea3.jpeg" alt="1" width="400" height="400" onclick="alert('투과 전자 현미경(TEM)으로 관측 후 그래픽화한 SARS-CoV-2')"></div>
+                    <div><img src="https://user-images.githubusercontent.com/90015362/145661163-a1cde5a7-c9a6-4a42-9f03-f3044e6e363c.png" alt="2"  width="400" height="400" onclick="alert('투과 전자 현미경(TEM)으로 관측 후 그래픽화한 SARS-CoV-2')"></div>
+                    <div><img src="https://user-images.githubusercontent.com/90015362/145661164-67f78803-113e-47ca-b32d-1dbda919d3de.jpeg" alt="3"  width="400" height="400" onclick="alert('내부 구성 요소를 보여주는 SARS-CoV-2 바이러스 단면도')"></div>
+                    <div><img src="https://user-images.githubusercontent.com/90015362/145661166-f7b81516-1f7f-4145-921f-2134c475efae.jpeg" alt="4"  width="400" height="400" onclick="alert('일반적인 코로나 바이러스인 SARS-CoV-2')"></div>
+                </details>  
+            
+            <details> 
+                <summary>발생 원인</summary> <!--글씨 스타일 바꾸기-->
+                <p>중국 우한에서 발생했다는 사실 이외에는 아직까지 정확한 발생원인은 알려진 것이 없고 가설만 존재한다. 다음은 WHO 조사단을 대표하여 식품안전·동물질병 전문가인 피터 벤 엠바렉 박사가 소개한 4가지의 가설들이다.</p>
+                    <ol>
+                            <li>야생 동물에 있던 바이러스가 종간 장벽을 넘어 사람에게 직접 전파됐을 가능성</li>
+                            <li>동물 바이러스가 중간 숙주에서 적응 단계를 거쳐 사람에게 전파됐을 가능성</li>
+                            <li>냉동식품이나 냉동된 야생동물 고기를 통해 전파됐을 가능성</li>
+                            <li>실험실에서 누출됐을 가능성</li>
+                    </ol>
+            </details>
+            
+            <details>       
+                <summary>증상</summary>
+                <ul>
+                    <li>발열 또는 오한</li>
+                    <li>기침</li>
+                    <li>숨가쁨 또는 호흡곤란</li>
+                    <li>피로</li>
+                    <li>근육통 또는 몸살</li>
+                    <li>두통</li>
+                    <li>미각 또는 후각 상실</li>
+                    <li>인후염</li>
+                    <li>코막힘 또는 콧물</li>
+                    <li>메스꺼움 또는 구토</li>
+                    <li>설사</li>
+                </ul>
+            </details>
+        
+            <details>
+                <summary>예방법</summary>  
+                <ul>
+                    <li>무증상으로 보이더라도 타인과 안전한 거리(1미터 이상)를 유지하세요.</li>
+                    <li>공공장소에서 특히 실내에 있거나 물리적 거리두기가 불가능할 땐 마스크를 쓰세요.</li>
+                    <li>밀폐된 공간보다는 개방되어 있고 환기가 잘 되는 공간을 선택하세요. 실내에서는 창문을 여세요.</li>
+                    <li>손을 자주 씻으세요. 비누와 물 또는 알코올 성분의 손 세정제를 사용하세요.</li>
+                    <li>차례가 오면 백신을 맞으세요. 백신 접종은 현지 지침을 따르세요.</li>
+                    <li>기침 또는 재채기를 할 때는 화장지를 이용하거나 팔꿈치를 구부려 코와 입을 가리세요.</li>
+                    <li>몸이 좋지 않다면 집에서 쉬세요.</li>
+                </ul>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/059c-VBnv2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </details>
+        </div>    
+        <div style="position: absolute; right: 0px; bottom: 0px;">
+            <h1><strong>&copy;copyright 심 훈 All rights reserved</strong></h1><!--저작권 표시-->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            #title {text-align: center; animation:tracking-in-contract 2s ease-in-out; animation-iteration-count: infinite;}
+            @keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
+            body {
+                    height: 100vh;
+                    background-image: url('https://user-images.githubusercontent.com/90015362/145661165-c5005b1d-c5a6-4b9b-9d27-aedd6461b310.jpg');
+                    background-repeat : no-repeat;
+                    background-size : cover;
+                }
+                first {float: left;}
+                second {float: right; position: absolute;}
+            input {color:navy; background-color: lime; transition : font-size 1s; position: absolute; right: 0px; padding: 20px; bottom: 70px; border-radius: 10%;} 
+            input:hover{color: crimson; background-color: dodgerblue; font-size:150%;} 
+        </style>
+    </head>
+    <body>
+        <h1 id="title"><strong>COVID-19 발생현황</strong></h1>
+        <div>
+            <iframe id="first" src="http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=14&ncvContSeq=&contSeq=&board_id=&gubun=" frameborder="0" width="500" height="500" style="filter: Alpha(Opacity=35);">
+            </iframe>
+            <iframe id="second" src="http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=" frameborder="0" name="right" width="500" height="500"></iframe>
+            <br><br><br>
+            COVID-19 국가별 대응 사례 <!--새로운 창에서 화면 출력하기-->
+            <details>
+                <summary>아시아</summary>
+                <ol>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD">대한민국</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EC%A4%91%EA%B5%AD">중국</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EB%B6%81%ED%95%9C">북한</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EB%8C%80%EB%A7%8C">대만</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EC%9D%BC%EB%B3%B8">일본</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EB%AA%BD%EA%B3%A8">몽골</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%ED%83%9C%EA%B5%AD">태국</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%ED%95%84%EB%A6%AC%ED%95%80">필리핀</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EB%B2%A0%ED%8A%B8%EB%82%A8">베트남</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EB%9D%BC%EC%98%A4%EC%8A%A4">라오스</a></li>    
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EC%BA%84%EB%B3%B4%EB%94%94%EC%95%84">캄보디아</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EC%9D%B8%EB%8F%84%EB%84%A4%EC%8B%9C%EC%95%84">인도네시아</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EB%AF%B8%EC%96%80%EB%A7%88">미얀마</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EC%8B%B1%EA%B0%80%ED%8F%AC%EB%A5%B4">싱가포르</a></li>    
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EB%A7%90%EB%A0%88%EC%9D%B4%EC%8B%9C%EC%95%84">말레이시아</a></li>    
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EC%9D%B8%EB%8F%84">인도</a></li>    
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EC%9D%B4%EB%9E%80">이란</a></li> 
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EC%9D%B4%EC%8A%A4%EB%9D%BC%EC%97%98">이스라엘</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EC%82%AC%EC%9A%B0%EB%94%94%EC%95%84%EB%9D%BC%EB%B9%84%EC%95%84">사우디아라비아</a></li>    
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EC%8B%9C%EC%95%84/%EC%95%84%EB%9E%8D%EC%97%90%EB%AF%B8%EB%A6%AC%ED%8A%B8">아랍에미리트</a></li>
+                </ol>
+            </details>
+
+            <details>
+                <summary>아메리카</summary>
+                <ol>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4/%EB%AF%B8%EA%B5%AD">미국</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4/%EC%BA%90%EB%82%98%EB%8B%A4">캐나다</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4/%EB%A9%95%EC%8B%9C%EC%BD%94">멕시코</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4/%EB%B8%8C%EB%9D%BC%EC%A7%88">브라질</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4/%EC%95%84%EB%A5%B4%ED%97%A8%ED%8B%B0%EB%82%98">아르헨티나</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4/%EC%BD%9C%EB%A1%AC%EB%B9%84%EC%95%84">콜롬비아</a></li>
+                </ol>
+            </details>
+
+            <details>
+                <summary>유럽</summary>
+                <ol>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%9C%A0%EB%9F%BD/%EB%84%A4%EB%8D%9C%EB%9E%80%EB%93%9C">네덜란드</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%9C%A0%EB%9F%BD/%EB%8F%85%EC%9D%BC">독일</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%9C%A0%EB%9F%BD/%EB%B2%A8%EA%B8%B0%EC%97%90">벨기에</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%9C%A0%EB%9F%BD/%EC%8A%A4%ED%8E%98%EC%9D%B8">스페인</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%9C%A0%EB%9F%BD/%ED%94%84%EB%9E%91%EC%8A%A4">프랑스</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%9C%A0%EB%9F%BD/%EC%98%81%EA%B5%AD">영국</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%9C%A0%EB%9F%BD/%EC%8A%A4%EC%9C%84%EC%8A%A4">스위스</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%9C%A0%EB%9F%BD/%EC%9D%B4%ED%83%88%EB%A6%AC%EC%95%84">이탈리아</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%9C%A0%EB%9F%BD/%ED%84%B0%ED%82%A4">터키</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%9C%A0%EB%9F%BD/%EB%8D%B4%EB%A7%88%ED%81%AC">덴마크</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%9C%A0%EB%9F%BD/%EB%9F%AC%EC%8B%9C%EC%95%84">러시아</a></li>
+                </ol>
+            </details>
+            
+            <details>
+                <summary>오세아니아</summary>
+                <ol>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%98%A4%EC%84%B8%EC%95%84%EB%8B%88%EC%95%84/%ED%98%B8%EC%A3%BC">호주</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%98%A4%EC%84%B8%EC%95%84%EB%8B%88%EC%95%84/%EB%89%B4%EC%A7%88%EB%9E%9C%EB%93%9C">뉴질랜드</a></li>
+                </ol>
+            </details>
+
+            <details>
+                <summary>아프리카</summary>
+                <ol>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%ED%94%84%EB%A6%AC%EC%B9%B4/%EC%9D%B4%EC%A7%91%ED%8A%B8">이집트</a></li>
+                    <li><a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19/%EA%B5%AD%EA%B0%80%EB%B3%84%20%EB%8C%80%EC%9D%91/%EC%95%84%ED%94%84%EB%A6%AC%EC%B9%B4/%EB%82%A8%EC%95%84%ED%94%84%EB%A6%AC%EC%B9%B4%EA%B3%B5%ED%99%94%EA%B5%AD">남아프리카공화국</a></li>
+                </ol>
+            </details>
+        </div>    
+        <div style="position: absolute; right: 0px; bottom: 0px;">
+            <div id="GOMain"><input type="button" value="Go to Main"></div>
+            <h1><strong>&copy;copyright 심 훈 All rights reserved</strong></h1><!--저작권 표시-->
+        </div>
+    </body>
+<html>
+
+
